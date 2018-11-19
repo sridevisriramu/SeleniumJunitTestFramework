@@ -1,0 +1,295 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>SeleniumJunitFrameworkProject</groupId>
+	<artifactId>SeleniumJunitFrameworkProject</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<cucumber.version>1.2.5</cucumber.version>
+		<java.version>1.8</java.version>
+		<!--Dependency Versions -->
+		<selenium.version>3.11.0</selenium.version>
+		<assertj-core.version>3.9.1</assertj-core.version>
+		<slf4j.version>1.7.21</slf4j.version>
+		<logback.version>1.2.3</logback.version>
+		<lombok.version>1.16.20</lombok.version>
+		<webdrivermanager.version>2.2.0</webdrivermanager.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.picocontainer</groupId>
+			<artifactId>picocontainer</artifactId>
+			<version>2.14.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>${assertj-core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${webdrivermanager.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<!-- <scope>test</scope> -->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.20</version>
+			<type>maven-plugin</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.6.1</version>
+			<type>maven-plugin</type>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>2.12.2</version>
+			<!-- <scope>provided</scope> -->
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.54</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.54</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.3</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.javacsv</groupId>
+			<artifactId>javacsv</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.javacsv</groupId>
+			<artifactId>javacsv</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.5</version>
+		</dependency>
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>singleThreaded</id>
+			<properties>
+				<threads>1</threads>
+				<include.runners>**/AppRunnerSanityNonParallelTest.java</include.runners>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>nogrid</id>
+			<properties>
+				<remoteDriver>false</remoteDriver>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>grid</id>
+			<properties>
+				<remoteDriver>true</remoteDriver>
+			</properties>
+		</profile>
+
+		<!--'parallel' profile is executing tests in parallel - one "Runner" class 
+			per thread -->
+		<profile>
+			<id>parallel</id>
+			<properties>
+				<include.runners>**/*Test.java</include.runners>
+			</properties>
+		</profile>
+		<!--'parallelPlugin' profile is executing tests in parallel - with cucumber-jvm-parallel-plugin -->
+		<profile>
+			<id>parallelPlugin</id>
+			<properties>
+				<include.runners>**/Parallel*IT.class</include.runners>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.github.temyers</groupId>
+						<artifactId>cucumber-jvm-parallel-plugin</artifactId>
+						<version>${cucumber-jvm-parallel-plugin.version}</version>
+						<executions>
+							<execution>
+								<id>generateRunners</id>
+								<phase>generate-test-sources</phase>
+								<goals>
+									<goal>generateRunners</goal>
+								</goals>
+								<configuration>
+									<!-- Mandatory -->
+									<!-- comma separated list of package names to scan for glue code -->
+									<glue>
+										<package>com.test.stepdefs</package>
+										<package>test.common.hooks</package>
+
+									</glue>
+									<!-- These are optional, with the default values -->
+									<!-- Where to output the generated tests -->
+									<outputDirectory>${project.build.directory}/generated-test-sources/cucumber
+									</outputDirectory>
+									<!-- The directory, which must be in the root of the runtime classpath, 
+										containing your feature files. -->
+									<featuresDirectory>src/test/resources</featuresDirectory>
+									<!-- Directory where the cucumber report files shall be written -->
+									<cucumberOutputDir>${cucumberOutputDirectory}</cucumberOutputDir>
+									<!-- List of cucumber plugins. When none are provided the json formatter 
+										is used. For more advanced usage see section about configuring cucumber plugins -->
+									<plugins>
+										<plugin>
+											<!--The available options are junit, testng, html, pretty, json, 
+												usage and rerun -->
+											<name>json</name>
+										</plugin>
+										<plugin>
+											<!--The available options are junit, testng, html, pretty, json, 
+												usage and rerun -->
+											<name>html</name>
+										</plugin>
+										<plugin>
+											<name>pretty</name>
+										</plugin>
+									</plugins>
+									<!-- CucumberOptions.strict property -->
+									<strict>true</strict>
+									<!-- CucumberOptions.monochrome property -->
+									<monochrome>false</monochrome>
+									<!--The tags to run, maps to CucumberOptions.tags property -->
+									<!--<tags>"@all"</tags> -->
+									<tags>
+										<tag>${tags}</tag>
+									</tags>
+									<!-- Generate TestNG runners instead of JUnit ones. -->
+									<useTestNG>false</useTestNG>
+									<!-- The naming scheme to use for the generated test classes. One 
+										of 'simple' or 'feature-title' -->
+									<namingScheme>simple</namingScheme>
+									<!-- The class naming pattern to use. Only required/used if naming 
+										scheme is 'pattern'. -->
+									<namingPattern>Parallel{c}IT</namingPattern>
+									<!-- One of [SCENARIO, FEATURE]. SCENARIO generates one runner per 
+										scenario. FEATURE generates a runner per feature. -->
+									<parallelScheme>FEATURE</parallelScheme>
+									<!-- Specify a custom template for the generated sources (this is 
+										a path relative to the project base directory) -->
+									<customVmTemplate>src/test/resources/custom-runner-template.java.vm
+									</customVmTemplate>
+									<!-- Specify a custom package name for generated sources. Default 
+										is no package. -->
+									<!--<packageName></packageName> -->
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	
+
+</project>
